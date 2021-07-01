@@ -4,9 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import {Provider} from 'mobx-react'
+import BirdStore from './stores/birdStore'
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider BirdStore={BirdStore}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
